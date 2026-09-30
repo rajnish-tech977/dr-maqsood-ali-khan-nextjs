@@ -1,0 +1,8 @@
+/* Site styling is provided by the legacy template stylesheets loaded in app/layout.js
+   (bootstrap.min.css, style.css, etc. under /public/assets/css). This file intentionally
+   stays minimal so it doesn't conflict with them. */
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
