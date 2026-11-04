@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Login | Dr. Maqsood Ali Khan",
+  title: "Login",
+  robots: { index: false, follow: false },
 };
 
 export default function Login() {
@@ -19,7 +20,7 @@ export default function Login() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">
@@ -73,7 +74,7 @@ export default function Login() {
                             </button>
                         </form>
                         <div className="login-sign-up">
-                            <a href="/register">Do you need an account?</a>
+                            <a href="/register/">Do you need an account?</a>
                         </div>
                     </div>
                 </div>

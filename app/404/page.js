@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Page Not Found | Dr. Maqsood Ali Khan",
+  title: "Page Not Found",
+  robots: { index: false, follow: false },
 };
 
 export default function NotFoundDemo() {
@@ -19,7 +20,7 @@ export default function NotFoundDemo() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">

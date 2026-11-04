@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "npx --yes serve@latest out -l 3000",
+    "lint": "eslint",
+    "build:cpanel": "next build && chmod -R u=rwX,go=rX out && rm -f cpanel-upload.zip && (cd out && zip -r -X ../cpanel-upload.zip . -x '*.DS_Store')"
   },
   "dependencies": {
     "next": "16.3.6",

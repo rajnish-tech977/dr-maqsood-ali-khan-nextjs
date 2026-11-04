@@ -1,0 +1,42 @@
+# Apache / cPanel settings for the static export (copied into out/ by `npm run build`).
+
+# Custom 404 page
+ErrorDocument 404 /404.html
+
+# Folder URLs (/about -> /about/) are handled by Apache's DirectoryIndex automatically.
+DirectoryIndex index.html
+
+# Compress text assets
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml application/xml text/xml text/plain
+</IfModule>
+
+# Browser caching (faster repeat visits -> better Core Web Vitals)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Basic security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Once an SSL certificate is active on the domain, uncomment to force HTTPS:
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Once SSL is active, uncomment to send www -> bare domain over HTTPS (matches the canonical URLs):
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^www\.drmaqsoodalikhan\.com$ [NC]
+# RewriteRule ^(.*)$ https://drmaqsoodalikhan.com/$1 [L,R=301]

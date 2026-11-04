@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Checkout | Dr. Maqsood Ali Khan",
+  title: "Checkout",
+  robots: { index: false, follow: false },
 };
 
 export default function Checkout() {
@@ -18,7 +19,7 @@ export default function Checkout() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">

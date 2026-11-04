@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Shopping Cart | Dr. Maqsood Ali Khan",
+  title: "Shopping Cart",
+  robots: { index: false, follow: false },
 };
 
 export default function ShoppingCart() {
@@ -18,7 +19,7 @@ export default function ShoppingCart() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">
@@ -131,7 +132,7 @@ export default function ShoppingCart() {
                         </table>
                     </div>
                     <div className="checkout-action">
-                        <a href="/checkout" className="btn btn-primary">
+                        <a href="/checkout/" className="btn btn-primary">
                             Proceed to checkout
                             <i className="fa-solid fa-arrow-right btn-arrow"></i>
                         </a>

@@ -1,21 +1,29 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Dr. Maqsood Ali Khan - ENT, Head-Neck & Skull-Base Surgeon, Mumbai",
+  "short_name": "Dr. Maqsood Ali Khan",
+  "description": "ENT, Head-Neck and Skull-Base Endoscopic Surgeon in Mumbai",
+  "start_url": "/",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "/assets/img/favicon/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "/assets/img/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#00505e",
   "background_color": "#ffffff",
   "display": "standalone"
 }

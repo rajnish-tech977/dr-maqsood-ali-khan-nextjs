@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Coming Soon | Dr. Maqsood Ali Khan",
+  title: "Coming Soon",
+  robots: { index: false, follow: false },
 };
 
 export default function ComingSoon() {

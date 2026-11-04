@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Register | Dr. Maqsood Ali Khan",
+  title: "Register",
+  robots: { index: false, follow: false },
 };
 
 export default function Register() {
@@ -18,7 +19,7 @@ export default function Register() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">
@@ -83,7 +84,7 @@ export default function Register() {
                             </button>
                         </form>
                         <div className="login-sign-up">
-                            <a href="/login">Already have an account?</a>
+                            <a href="/login/">Already have an account?</a>
                         </div>
                     </div>
                 </div>

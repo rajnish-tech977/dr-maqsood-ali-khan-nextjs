@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Clinic Essentials | Dr. Maqsood Ali Khan",
+  title: "Clinic Essentials",
+  robots: { index: false, follow: false },
 };
 
 export default function Products() {
@@ -18,7 +19,7 @@ export default function Products() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">
@@ -180,7 +181,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -214,7 +215,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -250,7 +251,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -284,7 +285,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -318,7 +319,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -352,7 +353,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -386,7 +387,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -420,7 +421,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -454,7 +455,7 @@ export default function Products() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/shopping-cart" title="Add to Cart">
+                                                    <a href="/shopping-cart/" title="Add to Cart">
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </li>
@@ -474,15 +475,15 @@ export default function Products() {
                             <div className="col-md-12 text-center">
                                 <ul className="pagination-wrap">
                                     <li>
-                                        <a href="/products" aria-label="Previous">
+                                        <a href="/products/" aria-label="Previous">
                                             <i className="fa-solid fa-angle-left"></i>
                                         </a>
                                     </li>
-                                    <li><a href="/products">1</a></li>
-                                    <li><a href="/products">2</a></li>
-                                    <li><a href="/products">3</a></li>
+                                    <li><a href="/products/">1</a></li>
+                                    <li><a href="/products/">2</a></li>
+                                    <li><a href="/products/">3</a></li>
                                     <li>
-                                        <a href="/products" aria-label="Next">
+                                        <a href="/products/" aria-label="Next">
                                             <i className="fa-solid fa-angle-right"></i>
                                         </a>
                                     </li>

@@ -1,5 +1,15 @@
+import { site, telHref, whatsappHref, opdSchedule, opdNote } from "@/data/site";
+import { articles, articleHref } from "@/data/articles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { pageMeta } from "@/data/seo";
+
+export const metadata = pageMeta({
+  title: "Dr. Maqsood Ali Khan | ENT & Head-Neck Surgeon in Mumbai",
+  description: "Dr. Maqsood Ali Khan (MBBS, MS ENT, DORL): ENT, Head-Neck and Skull-Base Surgeon in Mumbai with 17+ years of experience at Masina, Saifee and Gramy Hospitals.",
+  path: "/",
+  keywords: site.keywordSets.home,
+});
 
 export default function Home() {
   return (
@@ -24,13 +34,13 @@ export default function Home() {
                             <p>
                                 Dr. Maqsood Ali Khan, MBBS, MS (ENT), DORL, is a Consultant ENT, Head-Neck and
                                 Skull-Base Endoscopic Surgeon with 17+ years of clinical practice, consulting at
-                                Masina Hospital (Byculla) and Saifee Hospital (Charni Road) in Mumbai.
+                                Masina Hospital (Byculla), Saifee Hospital (Charni Road) and Gramy Hospital in Mumbai.
                             </p>
                             <div className="group_btn">
-                                <a href="/book-appointment" className="btn btn-primary">
+                                <a href={telHref} className="btn btn-primary">
                                     Book Appointment
                                 </a>
-                                <a href="/about" className="btn btn-secondary">
+                                <a href="/about/" className="btn btn-secondary">
                                     More About Me
                                 </a>
                             </div>
@@ -60,7 +70,7 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="hero-img">
-                            <img src="/assets/img/maqsood.png" alt="img" className="img-fluid" />
+                            <img src="/assets/img/maqsood.png" alt="Dr. Maqsood Ali Khan, ENT, Head-Neck and Skull-Base Surgeon, Mumbai" className="img-fluid" style={{ transform: 'scaleX(-1) translateY(0)' }} />
                             <div className="hero-bar">
                                 <div className="hero-info">
                                     <div className="hero-icon">
@@ -71,7 +81,7 @@ export default function Home() {
                                         <p>Book your consultation now</p>
                                     </div>
                                 </div>
-                                <a href="/book-appointment" className="btn btn-primary">Book Now</a>
+                                <a href={telHref} className="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                         <div className="header-background"></div>
@@ -82,99 +92,70 @@ export default function Home() {
         
 
         
-        <section className="about-section" id="about">
+        <section className="about-section home-about" id="about">
             <div className="container">
-                <div className="row align-items-lg-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                        <div className="about-image-wrap" data-aos="fade-right" data-aos-delay="300">
-                            <div className="about-image">
-                                <img src="/assets/img/maqsoodali.png" alt="image" className="img-fluid" />
-                            </div>
-                            <div className="about-image-accent">
-                                <img src="/assets/img/about-accent.webp" alt="Medical consultation" className="img-fluid" />
-                            </div>
-                            <div className="about-experience-badge">
-                                <span>17+</span>
+                <div className="row align-items-center g-4 g-lg-5">
+                    <div className="col-lg-5 col-md-12" data-aos="fade-right" data-aos-delay="300">
+                        <div className="home-photo">
+                            <img src="/assets/img/maqsood-desk.jpg" alt="Dr. Maqsood Ali Khan, ENT and Head-Neck Surgeon, at his desk in Mumbai" />
+                            <div className="home-photo-badge">
+                                <strong>17+</strong>
                                 <span>Years of<br />Experience</span>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                        <div className="about-content" data-aos="fade-left" data-aos-delay="300">
+                    <div className="col-lg-7 col-md-12" data-aos="fade-left" data-aos-delay="300">
+                        <div className="about-content">
                             <div className="section-label">
-                                <span>About Me</span>
+                                <span>Meet the Surgeon</span>
                             </div>
                             <h2 className="section-heading">
-                                Committed to <em>Precision Care</em><br />
-                                In ENT, Head &amp; Neck Surgery
+                                Advanced <em>ENT &amp; Head-Neck</em> Care in Mumbai
                             </h2>
                             <p>
-                                I'm Dr. Maqsood Ali Khan, an Otorhinolaryngologist (ENT), Head-Neck Surgeon and
-                                Skull-Base Endoscopic Surgeon with 17+ years of clinical practice, consulting at
-                                Masina Hospital (Byculla) and Saifee Hospital (Charni Road) in Mumbai.
+                                Dr. Maqsood Ali Khan is an Otorhinolaryngologist, Head-Neck Surgeon and Skull-Base
+                                Endoscopic Surgeon with 17+ years of clinical practice, trained in skull-base surgery,
+                                robotic techniques and endoscopic thyroid surgery.
                             </p>
-                            <p>
-                                I hold an MBBS, an MS in Otorhinolaryngology (ENT) and a Diploma in Otorhinolaryngology
-                                (DORL), with advanced fellowship training in Skull-Base Surgery (Pittsburgh, USA),
-                                Robotic Surgical Techniques (Newcastle, UK) and Endoscopic Thyroidectomy (Vietnam).
-                                I consult in English, Hindi, Urdu and Marathi.
-                            </p>
-                            <div className="highlight-box">
-                                <p>
-                                    <i className="fa-solid fa-quote-left"></i>
-                                    My goal isn't just to remove disease — it's to help every patient return to
-                                    speaking, breathing and living well after treatment.
-                                </p>
-                            </div>
-                            <div className="about-meta row">
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Full Name</div>
-                                    <div className="meta-value">Dr. Maqsood Ali Khan, MBBS, MS (ENT), DORL</div>
+                            <div className="home-facts">
+                                <div className="home-fact">
+                                    <div className="home-fact-icon"><i className="fa-solid fa-graduation-cap"></i></div>
+                                    <div>
+                                        <h3>Qualifications</h3>
+                                        <p>MBBS, MS (ENT), DORL</p>
+                                    </div>
                                 </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Specialty</div>
-                                    <div className="meta-value">Otorhinolaryngologist, Head-Neck &amp; Skull-Base Endoscopic Surgeon</div>
+                                <div className="home-fact">
+                                    <div className="home-fact-icon"><i className="fa-solid fa-brain"></i></div>
+                                    <div>
+                                        <h3>Skull-Base Fellowship</h3>
+                                        <p>Pittsburgh, USA</p>
+                                    </div>
                                 </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Hospitals</div>
-                                    <div className="meta-value">Masina Hospital, Byculla &amp; Saifee Hospital, Charni Road</div>
+                                <div className="home-fact">
+                                    <div className="home-fact-icon"><i className="fa-solid fa-microscope"></i></div>
+                                    <div>
+                                        <h3>Advanced Training</h3>
+                                        <p>Robotic surgery (Newcastle, UK) &amp; endoscopic thyroidectomy (Vietnam)</p>
+                                    </div>
                                 </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Location</div>
-                                    <div className="meta-value">Mumbai, Maharashtra</div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Languages</div>
-                                    <div className="meta-value">English, Hindi, Urdu, Marathi</div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Phone</div>
-                                    <div className="meta-value">1800-266-0711 (Masina Hospital)</div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 meta-item">
-                                    <div className="meta-label">Availability</div>
-                                    <div className="meta-value1">OPD: Tue, Wed &amp; Thu, 7–9 PM (Masina Hospital)</div>
+                                <div className="home-fact">
+                                    <div className="home-fact-icon"><i className="fa-solid fa-hospital"></i></div>
+                                    <div>
+                                        <h3>Consults At</h3>
+                                        <p>Masina, Saifee &amp; Gramy Hospitals, Mumbai</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="about-specialties">
-                                <a className="specialty-tag" href="/services"><span>Head &amp; Neck / Skull-Base Surgery</span></a>
-                                <a className="specialty-tag" href="/services"><span>Endoscopic Thyroid Surgery</span></a>
-                                <a className="specialty-tag" href="/services"><span>Sleep Apnea &amp; Snoring Treatment</span></a>
-                                <a className="specialty-tag" href="/services"><span>Voice &amp; Laryngeal Surgery</span></a>
-                                <a className="specialty-tag" href="/services"><span>Rhinoplasty &amp; Nasal Surgery</span></a>
-                                <a className="specialty-tag" href="/services"><span>General ENT &amp; Vertigo Care</span></a>
-                            </div>
-                            <div className="d-flex flex-wrap gap-2">
-                                <div className="group_btn">
-                                    <a href="/book-appointment" className="btn btn-primary">
-                                        <i className="fa-regular fa-calendar-check"></i>
-                                        Book Appointment
-                                    </a>
-                                    <a href="javascript:;" className="btn btn-secondary">
-                                        <i className="fa-solid fa-download"></i>
-                                        Download CV
-                                    </a>
-                                </div>
+                            <div className="group_btn mt-4">
+                                <a href="/about/" className="btn btn-primary">
+                                    <i className="fa-solid fa-user-doctor"></i>
+                                    Read Full Profile
+                                </a>
+                                <a href={telHref} className="btn btn-secondary">
+                                    <i className="fa-regular fa-calendar-check"></i>
+                                    Book Appointment
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -206,8 +187,8 @@ export default function Home() {
                             </div>
                             <h2>Head &amp; Neck / Skull-Base Surgery</h2>
                             <p>Surgical management of head &amp; neck and skull-base tumours, with fellowship training in skull-base surgery from Pittsburgh, USA.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/head-neck-skull-base-surgery/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -218,8 +199,8 @@ export default function Home() {
                             </div>
                             <h2>Endoscopic Thyroid Surgery</h2>
                             <p>Scarless endoscopic thyroidectomy techniques, refined through specialised training in Vietnam, for safer and faster recovery.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/endoscopic-thyroid-surgery/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -230,8 +211,8 @@ export default function Home() {
                             </div>
                             <h2>Sleep Apnea &amp; Snoring Treatment</h2>
                             <p>Diagnosis and treatment of obstructive sleep apnea and chronic snoring, including surgical and non-surgical options.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/sleep-apnea-snoring-treatment/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -242,8 +223,8 @@ export default function Home() {
                             </div>
                             <h2>Voice &amp; Laryngeal Surgery</h2>
                             <p>Evaluation and surgical treatment of voice and vocal cord disorders affecting speech and swallowing.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/voice-laryngeal-surgery/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -254,8 +235,8 @@ export default function Home() {
                             </div>
                             <h2>Rhinoplasty &amp; Nasal Surgery</h2>
                             <p>Functional and aesthetic nasal surgery, including septoplasty and rhinoplasty, for breathing and appearance concerns.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/rhinoplasty-nasal-surgery/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -266,8 +247,8 @@ export default function Home() {
                             </div>
                             <h2>General ENT &amp; Vertigo Care</h2>
                             <p>Diagnosis and treatment of sinusitis, tonsillitis, ear infections, vertigo and balance disorders.</p>
-                            <a href="/book-appointment" className="service-link">
-                                Schedule Now <i className="fa-solid fa-arrow-right"></i>
+                            <a href="/services/general-ent-vertigo-care/" className="service-link">
+                            View Details <i className="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -303,7 +284,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-lg-8 col-md-10 col-sm-12">
+                    <div className="col-lg-7 col-md-10 col-sm-12">
                         <div className="tab-panel active" id="experience-panel">
                             <div className="timeline">
                                 <div className="timeline-item" data-aos="fade-up" data-aos-delay="300">
@@ -316,7 +297,7 @@ export default function Home() {
                                         <div className="timeline-institution">Masina iMISS Center, South Mumbai</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-chalkboard-user"></i>
                                     </div>
@@ -326,7 +307,7 @@ export default function Home() {
                                         <div className="timeline-institution">IMMAST</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -336,7 +317,7 @@ export default function Home() {
                                         <div className="timeline-institution">Breach Candy Hospital Trust, Saifee Hospital &amp; S. L. Raheja Hospital (Fortis Associate)</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -346,7 +327,7 @@ export default function Home() {
                                         <div className="timeline-institution">Apollo Spectra Hospitals</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -356,7 +337,7 @@ export default function Home() {
                                         <div className="timeline-institution">Prince Aly Khan Hospital</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -366,7 +347,7 @@ export default function Home() {
                                         <div className="timeline-institution">Wockhardt Hospitals</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -376,7 +357,7 @@ export default function Home() {
                                         <div className="timeline-institution">Global Hospital, Parel</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-hospital"></i>
                                     </div>
@@ -386,7 +367,7 @@ export default function Home() {
                                         <div className="timeline-institution">Masina Hospital, Byculla</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-user-doctor"></i>
                                     </div>
@@ -396,7 +377,7 @@ export default function Home() {
                                         <div className="timeline-institution">Private Practice, Mumbai Metropolitan Region</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-graduation-cap"></i>
                                     </div>
@@ -412,13 +393,9 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-lg-8 col-md-10 col-sm-12">
                         <div className="tab-panel" id="education-panel">
                             <div className="timeline">
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-graduation-cap"></i>
                                     </div>
@@ -428,7 +405,7 @@ export default function Home() {
                                         <p>Bachelor of Medicine, Bachelor of Surgery.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-flask"></i>
                                     </div>
@@ -438,7 +415,7 @@ export default function Home() {
                                         <p>Master of Surgery in Otorhinolaryngology, Maharashtra University of Health Sciences, Nashik.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-award"></i>
                                     </div>
@@ -448,7 +425,7 @@ export default function Home() {
                                         <p>Diploma in Otorhinolaryngology.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-certificate"></i>
                                     </div>
@@ -458,7 +435,7 @@ export default function Home() {
                                         <div className="timeline-institution">Pittsburgh, USA</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-certificate"></i>
                                     </div>
@@ -468,7 +445,7 @@ export default function Home() {
                                         <div className="timeline-institution">Newcastle, UK</div>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-certificate"></i>
                                     </div>
@@ -480,13 +457,9 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-lg-8 col-md-10 col-sm-12">
                         <div className="tab-panel" id="awards-panel">
                             <div className="timeline">
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-brain"></i>
                                     </div>
@@ -495,7 +468,7 @@ export default function Home() {
                                         <p>Surgical management of head &amp; neck and skull-base tumours.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-bolt"></i>
                                     </div>
@@ -504,7 +477,7 @@ export default function Home() {
                                         <p>Scarless thyroidectomy using advanced endoscopic techniques.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-moon"></i>
                                     </div>
@@ -513,7 +486,7 @@ export default function Home() {
                                         <p>Diagnosis and management of obstructive sleep apnea and chronic snoring.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-microphone"></i>
                                     </div>
@@ -522,7 +495,7 @@ export default function Home() {
                                         <p>Evaluation and surgical treatment of voice and vocal cord disorders.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-wave-square"></i>
                                     </div>
@@ -531,7 +504,7 @@ export default function Home() {
                                         <p>Functional and aesthetic nasal surgery, including septoplasty.</p>
                                     </div>
                                 </div>
-                                <div className="timeline-item">
+                                <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
                                     <div className="timeline-dot">
                                         <i className="fa-solid fa-stethoscope"></i>
                                     </div>
@@ -541,6 +514,23 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-5 col-md-10 col-sm-12 timeline-photos-col">
+                        <div className="timeline-photos" data-aos="fade-left" data-aos-delay="200">
+                            <figure className="tl-photo">
+                                <img src="/assets/img/award-handover.jpg" alt="Dr. Maqsood Ali Khan receiving his recognition at the Great Indian Healthcare Leaders Summit and Awards 2024" loading="lazy" />
+                                <figcaption>Recognised at the Great Indian Healthcare Leaders Summit &amp; Awards 2024</figcaption>
+                            </figure>
+                            <div className="tl-photo-row">
+                                <figure className="tl-photo">
+                                    <img src="/assets/img/award-panel-1.jpg" alt="Dr. Maqsood Ali Khan speaking on the panel at the Great Indian Healthcare Leaders Summit 2024" loading="lazy" />
+                                </figure>
+                                <figure className="tl-photo">
+                                    <img src="/assets/img/award-panel-2.jpg" alt="Dr. Maqsood Ali Khan during the panel discussion on patient experience, 2024" loading="lazy" />
+                                </figure>
+                            </div>
+                            <p className="tl-photo-note">Panel discussion: &ldquo;Transforming Patient Experience: The Future of Personalized Healthcare&rdquo;</p>
                         </div>
                     </div>
                 </div>
@@ -564,82 +554,34 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row g-4">
-                    <div className="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                        <article className="blog-card">
-                            <div className="blog-thumb">
-                                <img src="/assets/img/blog-18.jpg" alt="image" />
-                                <div className="blog-category">
-                                    <span>Head &amp; Neck Oncology</span>
+                    {articles.slice(0, 3).map((a, i) => (
+                        <div className="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay={300 + i * 100} key={a.slug}>
+                            <article className="blog-card">
+                                <div className="blog-thumb">
+                                    <a href={articleHref(a)}><img src={a.image} alt={a.title} /></a>
+                                    <div className="blog-category">
+                                        <span>{a.category}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="blog-body">
-                                <div className="blog-meta">
-                                    <span><i className="fa-regular fa-calendar"></i> Mar 15, 2026</span>
-                                    <span><i className="fa-regular fa-clock"></i> 5 min read</span>
+                                <div className="blog-body">
+                                    <div className="blog-meta">
+                                        <span><i className="fa-regular fa-clock"></i> {a.readTime}</span>
+                                    </div>
+                                    <h3><a href={articleHref(a)}>{a.title}</a></h3>
+                                    <p>{a.excerpt}</p>
+                                    <div className="blog-read-more">
+                                        <a href={articleHref(a)}>
+                                            Read Articles <i className="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                                <h3><a href="javascript:;">Early Warning Signs of Head &amp; Neck Cancer You Shouldn’t Ignore</a></h3>
-                                <p>
-                                    Understanding the symptoms that warrant a timely ENT evaluation and early diagnosis.
-                                </p>
-                                <div className="blog-read-more"><a href="/blog-details">
-                                        Read Articles <i className="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                        <article className="blog-card">
-                            <div className="blog-thumb">
-                                <img src="/assets/img/blog-15.jpg" alt="image" />
-                                <div className="blog-category">
-                                    <span>Robotic Surgery</span>
-                                </div>
-                            </div>
-                            <div className="blog-body">
-                                <div className="blog-meta">
-                                    <span><i className="fa-regular fa-calendar"></i> Feb 02, 2026</span>
-                                    <span><i className="fa-regular fa-clock"></i> 7 min read</span>
-                                </div>
-                                <h3><a href="javascript:;">How Robotic Surgery Is Transforming Head &amp; Neck Cancer Treatment</a></h3>
-                                <p>
-                                    A look at how minimally invasive robotic techniques improve recovery and outcomes.
-                                </p>
-                                <div className="blog-read-more"><a href="/blog-details">
-                                        Read Articles <i className="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="500">
-                        <article className="blog-card">
-                            <div className="blog-thumb">
-                                <img src="/assets/img/blog-14.jpg" alt="image" />
-                                <div className="blog-category">
-                                    <span>Patient Care</span>
-                                </div>
-                            </div>
-                            <div className="blog-body">
-                                <div className="blog-meta">
-                                    <span><i className="fa-regular fa-calendar"></i> Jan 20, 2026</span>
-                                    <span><i className="fa-regular fa-clock"></i> 4 min read</span>
-                                </div>
-                                <h3><a href="javascript:;">Living Well After Thyroid Surgery: Recovery &amp; Follow-Up Care</a></h3>
-                                <p>
-                                    Practical guidance for patients recovering from endoscopic thyroid surgery.
-                                </p>
-                                <div className="blog-read-more"><a href="/blog-details">
-                                        Read Articles <i className="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                            </article>
+                        </div>
+                    ))}
                 </div>
                 <div className="row mt-4" data-aos="fade-up" data-aos-delay="300">
                     <div className="col-12 text-center">
-                        <a href="/blog" className="btn btn-primary">
+                        <a href="/blog/" className="btn btn-primary">
                             <i className="fa-solid fa-newspaper"></i> View All Articles
                         </a>
                     </div>
@@ -860,7 +802,7 @@ export default function Home() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-1.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -875,7 +817,7 @@ export default function Home() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -894,7 +836,7 @@ export default function Home() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-2.jpg" alt="Medical Gloves" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -909,7 +851,7 @@ export default function Home() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -930,7 +872,7 @@ export default function Home() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-3.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -945,7 +887,7 @@ export default function Home() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -964,7 +906,7 @@ export default function Home() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-4.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -979,7 +921,7 @@ export default function Home() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -996,7 +938,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="mt-5 text-center">
-                    <a href="/products" className="btn btn-primary">
+                    <a href="/products/" className="btn btn-primary">
                         View All Products
                     </a>
                 </div>

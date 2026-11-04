@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Product Details | Dr. Maqsood Ali Khan",
+  title: "Product Details",
+  robots: { index: false, follow: false },
 };
 
 export default function ProductDetails() {
@@ -19,7 +20,7 @@ export default function ProductDetails() {
         
         <section className="page-header">
             <div className="page-header-bg">
-                <img src="/assets/img/page-header-bg.jpg" alt="img" />
+                <img src="/assets/img/page-header-bg.jpg" alt="" />
             </div>
             <div className="container">
                 <div className="page-header-inner">
@@ -91,7 +92,7 @@ export default function ProductDetails() {
                             </div>
 
                             <div className="single-shop-page-btn">
-                                <a href="/shopping-cart" className="btn btn-primary">
+                                <a href="/shopping-cart/" className="btn btn-primary">
                                     <i className="fa fa-shopping-cart"></i>
                                     add to cart
                                 </a>
@@ -118,7 +119,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-1.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -133,7 +134,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -152,7 +153,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-2.jpg" alt="Medical Gloves" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -167,7 +168,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -188,7 +189,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-3.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -203,7 +204,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -222,7 +223,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-4.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -237,7 +238,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -256,7 +257,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-5.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -271,7 +272,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -290,7 +291,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-6.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -305,7 +306,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -324,7 +325,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-7.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -339,7 +340,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>
@@ -358,7 +359,7 @@ export default function ProductDetails() {
                         <div className="product-item">
                             <div className="product-image">
                                 <figure>
-                                    <a href="/product-details">
+                                    <a href="/product-details/">
                                         <img src="/assets/img/pic-4.jpg" alt="product 1" />
                                     </a>
                                     <ul className="shop-item-controls">
@@ -373,7 +374,7 @@ export default function ProductDetails() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/shopping-cart" title="Add to Cart">
+                                            <a href="/shopping-cart/" title="Add to Cart">
                                                 <i className="fa fa-shopping-cart"></i>
                                             </a>
                                         </li>

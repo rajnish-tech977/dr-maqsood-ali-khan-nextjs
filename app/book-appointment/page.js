@@ -1,14 +1,20 @@
+import { site, telHref, whatsappHref, opdSchedule, opdNote } from "@/data/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { pageMeta, breadcrumbSchema } from "@/data/seo";
 
-export const metadata = {
-  title: "Book an Appointment | Dr. Maqsood Ali Khan",
-  description: "Book a consultation with Dr. Maqsood Ali Khan, ENT, Head-Neck & Skull-Base Surgeon at Masina and Saifee Hospitals, Mumbai.",
-};
+export const metadata = pageMeta({
+  title: "Dr. Maqsood Ali Khan | Book an ENT Appointment in Mumbai",
+  description: "Book a consultation with Dr. Maqsood Ali Khan, ENT, Head-Neck and Skull-Base Surgeon. OPD: Tue-Thu 6 PM at Masina Hospital, Mon & Fri 7 PM at Saifee Hospital and Mon & Fri 5 PM at Gramy Hospital. All strictly by appointment. Book on WhatsApp or call +91 98204 03437.",
+  path: "/book-appointment/",
+  keywords: site.keywordSets.appointment,
+});
 
 export default function BookAppointment() {
   return (
     <div className="main-wrapper">
+      <JsonLd data={breadcrumbSchema([{name:"Home",path:"/"},{name:"Book Appointment",path:"/book-appointment/"}])} />
       <Header />
 
                
@@ -20,7 +26,7 @@ export default function BookAppointment() {
     
     <section className="page-header">
         <div className="page-header-bg">
-            <img src="/assets/img/page-header-bg.jpg" alt="img" />
+            <img src="/assets/img/page-header-bg.jpg" alt="" />
         </div>
         <div className="container">
             <div className="page-header-inner">
@@ -40,76 +46,27 @@ export default function BookAppointment() {
         <div className="container">
             <div className="row align-items-lg-center g-4">
                 <div className="col-lg-5">
-                    <div className="appointment-image">
-                        <img src="/assets/img/appointment-img.png" alt="Appointment" />
+                    <div className="appointment-image appointment-portrait">
+                        <img src="/assets/img/maqsood-office.jpg" alt="Dr. Maqsood Ali Khan seated at his desk in the consulting room" />
                     </div>
                 </div>
                 <div className="col-lg-7">
                     <div className="appointment-box">
                         <div className="section-label">
-                            <span>Make An Appointment</span>
+                            <span>Schedule your visit online</span>
                         </div>
-                        <h2>Contact us for any medical help and fill out an appointment form</h2>
-                        <form className="appointment-form">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Full Name</label>
-                                        <input type="text" placeholder="Evan Edwards" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Email Address</label>
-                                        <input type="email" placeholder="example@gmail.com" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Phone Number</label>
-                                        <input type="text" placeholder="+1 234 567 890" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Booking Date</label>
-                                        <input type="date" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Service</label>
-                                        <select>
-                                            <option>Select Service</option>
-                                            <option>Head &amp; Neck / Skull-Base Surgery</option>
-                                            <option>Endoscopic Thyroid Surgery</option>
-                                            <option>Sleep Apnea &amp; Snoring Treatment</option>
-                                            <option>Voice &amp; Laryngeal Surgery</option>
-                                            <option>Rhinoplasty &amp; Nasal Surgery</option>
-                                            <option>General ENT &amp; Vertigo Care</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="ap-field">
-                                        <label>Doctor</label>
-                                        <select>
-                                            <option>Dr. Maqsood Ali Khan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-12">
-                                    <div className="gender-group">
-                                        <label><input type="radio" name="gender" /> Male</label>
-                                        <label><input type="radio" name="gender" /> Female</label>
-                                        <label><input type="radio" name="gender" /> Prefer not to say</label>
-                                    </div>
-                                    <button type="button" className="btn btn-primary">
-                                        Confirm Appointment
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        <h2>Take the next step and schedule an appointment today</h2>
+                        <div className="d-flex flex-wrap gap-3 mt-4">
+                            <a href={telHref} className="btn btn-primary">
+                                <i className="fa-solid fa-phone"></i> Call Us
+                            </a>
+                            <a href={whatsappHref()} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-whatsapp"></i> WhatsApp Us
+                            </a>
+                        </div>
+                        <p className="mt-3">
+                            Call or WhatsApp us on <strong><a href={telHref}>{site.phone}</a></strong>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -127,8 +84,8 @@ export default function BookAppointment() {
                 </div>
                 <h2>OPD Availability</h2>
                 <p>
-                    Confirmed OPD hours are at Masina Hospital, Byculla. For Saifee Hospital and other
-                    consulting locations, please contact the hospital reception directly to confirm timing.
+                    Consultations at Masina iMISS Center (Masina Hospital), Saifee Hospital and Gramy Hospital are
+                    strictly by appointment. Please call or WhatsApp to book your slot.
                 </p>
             </div>
             <div className="calendar-table-wrap">
@@ -147,21 +104,51 @@ export default function BookAppointment() {
 
                     <tbody>
                         <tr>
-                            <td className="time">7.00 PM – 9.00 PM</td>
+                            <td className="time">5:00 PM</td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Gramy Hospital</span>
+                            </td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td>
                                 <h2>Dr. Maqsood Ali Khan</h2>
-                                <span>Masina Hospital OPD</span>
-                            </td>
-                            <td>
-                                <h2>Dr. Maqsood Ali Khan</h2>
-                                <span>Masina Hospital OPD</span>
-                            </td>
-                            <td>
-                                <h2>Dr. Maqsood Ali Khan</h2>
-                                <span>Masina Hospital OPD</span>
+                                <span>Gramy Hospital</span>
                             </td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td className="time">6:00 PM</td>
+                            <td></td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Masina iMISS Center, Masina Hospital</span>
+                            </td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Masina iMISS Center, Masina Hospital</span>
+                            </td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Masina iMISS Center, Masina Hospital</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td className="time">7:00 PM</td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Saifee Hospital</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <h2>Dr. Maqsood Ali Khan</h2>
+                                <span>Saifee Hospital</span>
+                            </td>
                             <td></td>
                         </tr>
                     </tbody>
